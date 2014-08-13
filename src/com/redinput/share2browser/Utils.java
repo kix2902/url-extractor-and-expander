@@ -9,6 +9,9 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import android.app.Activity;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.util.Pair;
 
 public class Utils {
@@ -101,5 +104,18 @@ public class Utils {
 		} catch (RuntimeException e) {
 			return false;
 		}
+	}
+
+	public static void applySharedTheme(Activity act) {
+		SharedPreferences sPref = PreferenceManager.getDefaultSharedPreferences(act);
+		String themeId = sPref.getString("theme", "dark");
+
+		if ("dark".equalsIgnoreCase(themeId)) {
+			act.setTheme(R.style.AppTheme);
+
+		} else if ("light".equalsIgnoreCase(themeId)) {
+			act.setTheme(R.style.AppTheme_Light);
+		}
+
 	}
 }

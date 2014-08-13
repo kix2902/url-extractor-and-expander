@@ -21,6 +21,8 @@ public class ReceiveActivity extends Activity {
 	protected void onStart() {
 		super.onStart();
 
+		Utils.applySharedTheme(this);
+
 		Intent intent = getIntent();
 		if (Intent.ACTION_SEND.equalsIgnoreCase(intent.getAction())) {
 			String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);

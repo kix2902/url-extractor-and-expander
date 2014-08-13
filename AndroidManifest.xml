@@ -5,7 +5,7 @@
     android:versionCode="10"
     android:versionName="2.0"
     tools:ignore="UnusedAttribute" >
- 
+
     <uses-sdk
         android:minSdkVersion="1"
         android:targetSdkVersion="19" />
@@ -27,8 +27,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:label="@string/app_name" >
         <activity android:name="com.redinput.share2browser.PrefsActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

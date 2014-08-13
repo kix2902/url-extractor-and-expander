@@ -3,4 +3,13 @@
     <string name="app_name">URL eXtractor &amp; eXpander</string>
     <string name="receiver_label">eXtract &amp; eXpand</string>
 
+    <string-array name="theme_names">
+        <item>Dark theme</item>
+        <item>Light theme</item>
+    </string-array>
+    <string-array name="theme_values">
+        <item>dark</item>
+        <item>light</item>
+    </string-array>
+
 </resources>
