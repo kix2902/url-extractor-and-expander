@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.redinput.share2browser"
     android:installLocation="auto"
-    android:versionCode="10"
-    android:versionName="2.0"
+    android:versionCode="11"
+    android:versionName="@string/app_version"
     tools:ignore="UnusedAttribute" >
 
     <uses-sdk
@@ -23,6 +23,7 @@
         android:required="false" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"

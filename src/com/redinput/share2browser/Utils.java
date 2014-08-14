@@ -116,6 +116,6 @@ public class Utils {
 		} else if ("light".equalsIgnoreCase(themeId)) {
 			act.setTheme(R.style.AppTheme_Light);
 		}
-
 	}
+
 }

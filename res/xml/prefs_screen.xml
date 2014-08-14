@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <ListPreference
-        android:defaultValue="dark"
-        android:dialogTitle="Select a theme"
-        android:entries="@array/theme_names"
-        android:entryValues="@array/theme_values"
-        android:key="theme"
-        android:title="Theme used in the application" />
+    <PreferenceCategory android:title="General" >
+        <ListPreference
+            android:defaultValue="dark"
+            android:dialogTitle="Select a theme"
+            android:entries="@array/theme_names"
+            android:entryValues="@array/theme_values"
+            android:key="theme"
+            android:title="Theme used in the application" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="vibrate"
+            android:summary="Vibrate after extract and expand urls"
+            android:title="Vibration" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="About..." >
+        <Preference
+            android:key="about_app"
+            android:summary="@string/app_version"
+            android:title="@string/app_name" />
+        <Preference
+            android:key="more_apps"
+            android:title="More apps by RedInput" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://play.google.com/store/apps/developer?id=RedInput" />
+        </Preference>
+    </PreferenceCategory>
 
 </PreferenceScreen>

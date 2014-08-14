@@ -5,12 +5,16 @@ import java.util.ArrayList;
 import android.app.Activity;
 import android.app.AlertDialog.Builder;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Vibrator;
+import android.preference.PreferenceManager;
 
 import com.redinput.share2browser.adapter.UrlsAdapter;
 
@@ -90,6 +94,13 @@ public class ReceiveActivity extends Activity {
 
 			if (dialog.isShowing()) {
 				dialog.dismiss();
+			}
+
+			SharedPreferences sPref = PreferenceManager
+					.getDefaultSharedPreferences(ReceiveActivity.this);
+			if (sPref.getBoolean("vibrate", false)) {
+				Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+				v.vibrate(200);
 			}
 
 			builder.create().show();
