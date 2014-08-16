@@ -27,6 +27,7 @@ public class PrefsActivity extends PreferenceActivity implements OnPreferenceCha
 		if (preference.equals(prefTheme)) {
 			Intent iRestart = new Intent(this, this.getClass());
 			startActivity(iRestart);
+			overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 			finish();
 
 			return true;

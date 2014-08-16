@@ -1,7 +1,7 @@
 <resources>
 
     <string name="app_name">URL eXtractor &amp; eXpander</string>
-    <string name="app_version">2.0 beta2</string>
+    <string name="app_version">2.0 beta3</string>
     <string name="receiver_label">eXtract &amp; eXpand</string>
 
     <string-array name="theme_names">
