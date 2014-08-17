@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name">URL eXtractor y eXpansor</string>
+    <string name="receiver_label">eXtraer y eXpandir URL</string>
+
+    <string-array name="theme_names">
+        <item>Tema oscuro</item>
+        <item>Tema claro</item>
+    </string-array>
+
+    <string name="copied_clipboard">URL expandida copiada al portapapeles</string>
+    <string name="no_links">No se detectaron enlaces</string>
+    <string name="dialog_extracting_expanding">Extrayendo y expandiendo URLs</string>
+
+</resources>
