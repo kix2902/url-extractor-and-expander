@@ -42,6 +42,7 @@ public class ReceiveActivity extends Activity {
 
 		} else {
 			Toast.makeText(this, R.string.no_links, Toast.LENGTH_SHORT).show();
+			finish();
 		}
 	}
 
