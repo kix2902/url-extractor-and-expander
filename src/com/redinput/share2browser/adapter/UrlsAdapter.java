@@ -3,14 +3,18 @@ package com.redinput.share2browser.adapter;
 import java.util.ArrayList;
 
 import android.content.Context;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.redinput.share2browser.R;
 
+@SuppressWarnings("deprecation")
 public class UrlsAdapter extends BaseAdapter {
 
 	private final ArrayList<ArrayList<String>> listUrls;
@@ -49,7 +53,7 @@ public class UrlsAdapter extends BaseAdapter {
 		txtFinal.setSelected(true);
 
 		ArrayList<String> url = listUrls.get(position);
-		String urlFinal = url.get(url.size() - 1);
+		final String urlFinal = url.get(url.size() - 1);
 		String urlOriginal = url.get(0);
 
 		txtFinal.setText(urlFinal);
@@ -62,6 +66,29 @@ public class UrlsAdapter extends BaseAdapter {
 		} else {
 			txtOriginal.setVisibility(View.GONE);
 		}
+
+		convertView.setOnLongClickListener(new OnLongClickListener() {
+			@Override
+			public boolean onLongClick(View v) {
+				if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
+					android.text.ClipboardManager clipboard = (android.text.ClipboardManager) context
+							.getSystemService(Context.CLIPBOARD_SERVICE);
+					clipboard.setText(urlFinal);
+
+				} else {
+					android.content.ClipboardManager clipboard = (android.content.ClipboardManager) context
+							.getSystemService(Context.CLIPBOARD_SERVICE);
+					android.content.ClipData clip = android.content.ClipData.newPlainText(context
+							.getResources().getString(R.string.app_name), urlFinal);
+					clipboard.setPrimaryClip(clip);
+				}
+
+				Toast.makeText(context, "Unshortened URL copied to clipboard", Toast.LENGTH_SHORT)
+						.show();
+
+				return true;
+			}
+		});
 
 		return convertView;
 	}
