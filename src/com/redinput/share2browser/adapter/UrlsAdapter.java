@@ -2,6 +2,7 @@ package com.redinput.share2browser.adapter;
 
 import java.util.ArrayList;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Build;
 import android.view.LayoutInflater;
@@ -40,6 +41,7 @@ public class UrlsAdapter extends BaseAdapter {
 		return position;
 	}
 
+	@SuppressLint("NewApi")
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		if (convertView == null) {
@@ -83,8 +85,7 @@ public class UrlsAdapter extends BaseAdapter {
 					clipboard.setPrimaryClip(clip);
 				}
 
-				Toast.makeText(context, "Unshortened URL copied to clipboard", Toast.LENGTH_SHORT)
-						.show();
+				Toast.makeText(context, R.string.copied_clipboard, Toast.LENGTH_SHORT).show();
 
 				return true;
 			}

@@ -15,6 +15,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
+import android.widget.Toast;
 
 import com.redinput.share2browser.adapter.UrlsAdapter;
 
@@ -36,7 +37,12 @@ public class ReceiveActivity extends Activity {
 			listUrl.add(intent.getDataString());
 		}
 
-		new AsyncExpand().execute();
+		if (listUrl.size() > 0) {
+			new AsyncExpand().execute();
+
+		} else {
+			Toast.makeText(this, R.string.no_links, Toast.LENGTH_SHORT).show();
+		}
 	}
 
 	private class AsyncExpand extends AsyncTask<Void, Void, Void> {
