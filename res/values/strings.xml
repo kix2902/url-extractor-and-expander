@@ -16,5 +16,12 @@
     <string name="copied_clipboard">Expanded URL copied to clipboard</string>
     <string name="no_links">No links detected</string>
     <string name="dialog_extracting_expanding">Extracting and expanding URLs</string>
+    <string name="pref_cat_general">General</string>
+    <string name="pref_cat_about">About&#8230;</string>
+    <string name="pref_theme_dialog_title">Select a theme</string>
+    <string name="pref_theme_title">Theme used in the application</string>
+    <string name="pref_vibrate_title">Vibration</string>
+    <string name="pref_vibrate_summary">Vibrate after eXtract and eXpand URLs</string>
+    <string name="pref_more_title">More apps by RedInput</string>
 
 </resources>

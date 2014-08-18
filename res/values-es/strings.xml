@@ -11,5 +11,12 @@
     <string name="copied_clipboard">URL expandida copiada al portapapeles</string>
     <string name="no_links">No se detectaron enlaces</string>
     <string name="dialog_extracting_expanding">Extrayendo y expandiendo URLs</string>
+    <string name="pref_cat_general">General</string>
+    <string name="pref_cat_about">Acerca de&#8230;</string>
+    <string name="pref_theme_dialog_title">Selecciona un tema</string>
+    <string name="pref_theme_title">Tema usado en la aplicación</string>
+    <string name="pref_vibrate_title">Vibración</string>
+    <string name="pref_vibrate_summary">Vibrar tras eXtraer y eXpandir URLs</string>
+    <string name="pref_more_title">Más aplicaciones de RedInput</string>
 
 </resources>
