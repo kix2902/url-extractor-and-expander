@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.redinput.share2browser"
     android:installLocation="auto"
-    android:versionCode="12"
+    android:versionCode="13"
     android:versionName="@string/app_version"
     tools:ignore="UnusedAttribute" >
 
