@@ -59,7 +59,7 @@ public class ReceiveActivity extends Activity {
 		protected void onPreExecute() {
 			super.onPreExecute();
 
-			dialog.setMessage("Extracting and expanding urls");
+			dialog.setMessage(getString(R.string.dialog_extracting_expanding));
 			dialog.show();
 		}
 
