@@ -20,7 +20,7 @@ import android.widget.Toast;
 import com.redinput.share2browser.adapter.UrlsAdapter;
 
 public class ReceiveActivity extends Activity {
-	private ArrayList<String> listUrl = new ArrayList<>();
+	private ArrayList<String> listUrl = new ArrayList<String>();
 
 	@Override
 	protected void onStart() {
@@ -51,7 +51,7 @@ public class ReceiveActivity extends Activity {
 		private final ProgressDialog dialog;
 
 		public AsyncExpand() {
-			expandedUrls = new ArrayList<>();
+			expandedUrls = new ArrayList<ArrayList<String>>();
 			dialog = new ProgressDialog(ReceiveActivity.this);
 		}
 

@@ -23,7 +23,7 @@ public class Utils {
 			urlArg = "http://" + urlArg;
 		}
 
-		ArrayList<String> visitedUrls = new ArrayList<>();
+		ArrayList<String> visitedUrls = new ArrayList<String>();
 		String originalUrl = urlArg;
 		visitedUrls.add(originalUrl);
 
